@@ -1,0 +1,5 @@
+<div style="margin: 15px;">
+    <input class="search" type="text" name="search" [(ngModel)]="searchText" autocomplete="off"
+        placeholder=" arama yap..">
+</div>
+<card [orders]="orders | filter:searchText"></card>
