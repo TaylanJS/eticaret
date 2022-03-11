@@ -13,6 +13,6 @@ export class CardComponent implements OnInit {
     selectBuyItem = [];
     buyItem(item: any) {
         this.selectBuyItem = item;
-        localStorage.setItem(item.id, item.name);
+        localStorage.setItem(item.id, JSON.stringify(item.data));
     }
 }

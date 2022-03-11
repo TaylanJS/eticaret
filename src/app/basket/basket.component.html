@@ -5,8 +5,12 @@
     <div *ngIf="urunler[0]">
         <mat-card class="example-card" *ngFor="let item of urunler; let i = index">
             <mat-card-header>
-                <mat-card-title>{{urunIsim[i]}}</mat-card-title>
+
+                <mat-card-title>Ürün Adı: {{urunIsim[i].name}} Adet: {{urunIsim[i].quantity}}</mat-card-title>
             </mat-card-header>
+            <button color="warn" (click)="addItem(item)" mat-button>+</button>
+            <button style="padding-left: 60px;" color="warn" (click)="deleteItem(item)" mat-button>-</button>
+            <br>
             <mat-card-subtitle>
                 İlan No: {{item}}
             </mat-card-subtitle>
